@@ -1,0 +1,240 @@
+.image-container8 {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .image-container8 img{
+    border-radius: 10px;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+  
+  .main-image.darken {
+    filter: brightness(50%);
+  }
+  
+  .tooltip-button {
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .tooltip-button:hover {
+    /* transform: translate(-50%, -50%) scale(1.2); */
+    box-shadow: 0 0 15px rgba(255, 138, 0, 0.5);
+  }
+  
+  .tooltip-button.hidden-buttonRAH {
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .tooltip-text {
+    position: absolute;
+    background-color: white;
+    border: 2px solid #003454;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    color: #4A4A4A;
+    opacity: 0;
+    visibility: hidden;
+    /* transition: all 0.3s ease; */
+    z-index: 4;
+  }
+  
+  .tooltip-text::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-left: 2px solid #003454;
+    border-top: 2px solid #003454;
+    transform: rotate(45deg);
+  }
+  
+  .tooltip-text.active {
+    opacity: 1;
+    visibility: visible;
+    /* animation: tooltipFadeIn 0.3s ease; */
+  }
+  
+  .tooltip-header-ra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 15px;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6E3CD2; */
+  }
+  
+  .tooltip-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  
+  .tooltip-title {
+    font-weight: 600;
+    color: #003454;
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    background-color: #003454;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .close-button:hover {
+    background-color: #003454;
+    transform: scale(1.1);
+  }
+  
+  @keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Posicionamiento de flechas según la posición */
+  .tooltip-text[data-position="right"] {
+    left: calc(100% + 20px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .tooltip-text[data-position="right"]::before {
+    left: -7px;
+    top: calc(50% - 6px);
+  }
+  
+  .tooltip-text[data-position="left"] {
+    /* right: calc(100% + 20px); */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .tooltip-text[data-position="left"]::before {
+    right: -7px;
+    top: calc(50% - 6px);
+    border-right: 2px solid #003454;
+    border-bottom: 2px solid #003454;
+    border-left: none;
+    border-top: none;
+  }
+  
+  .tooltip-text[data-position="top"] {
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tooltip-text[data-position="top"]::before {
+    bottom: -7px;
+    left: calc(50% - 6px);
+    transform: rotate(225deg);
+  }
+  
+  .tooltip-text[data-position="bottom"] {
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tooltip-text[data-position="bottom"]::before {
+    top: -7px;
+    left: calc(50% - 6px);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .image-container8 {
+        max-width: 100%;
+        /* padding: 0 20px; */
+    }
+  
+    .tooltip-text {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        /* top: 50% !important;
+        left: 50% !important; */
+        transform: translate(-40%, -20%) !important;
+        /* width: 90%; */
+        max-width: 200px;
+        margin: 0;
+    }
+  
+    .tooltip-text::before {
+        display: none;
+    }
+  
+    .tooltip-button {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+  }
+  
+  /* Animación para el oscurecimiento de la imagen */
+  .main-image {
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  /* Mejoras de accesibilidad */
+  .tooltip-button:focus {
+    outline: 3px solid #003454;
+    outline-offset: 2px;
+  }
+  
+  .close-button:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+  
+  

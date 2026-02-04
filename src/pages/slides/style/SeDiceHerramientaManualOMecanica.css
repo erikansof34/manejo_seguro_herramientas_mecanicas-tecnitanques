@@ -1,0 +1,112 @@
+/* Contenedor de la columna derecha */
+.md:flex-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Imagen debajo de la trivia */
+.trivia-image {
+  width: 80%; 
+  max-width: 200px; 
+  height: auto; 
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ajuste del espacio entre botones */
+button + button {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.mt-4 {
+  margin-top: 30px;
+}
+
+/* Texto y botones de respuesta */
+.trivia {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.text-red-500 {
+  margin-top: 20px;
+}
+
+/* Mensaje de advertencia y respuesta */
+.mt-2 {
+  margin-top: 20px;
+}
+
+.mt-6 {
+  margin-top: 40px;
+}
+
+.text-green-500 {
+  color: green;
+}
+
+.text-red-500 {
+  color: red;
+}
+
+/* Updated styles for the question box */
+.preguntas_01 .ctItem {
+  background: #fcfcfc;
+  padding: 15px;  
+  border-radius: 10px;
+  margin-top: .5rem;
+  max-width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.preguntas_01 .ctItem > div p {
+  background: #ebebeb;
+  color: #8f8f8f;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.preguntas_01 .ctItem > div p.act {
+  background: #353846;
+  color: white;
+}
+
+.preguntas_01 .ctItem > div p.true {
+  background: #65f38a;
+  color: white;
+}
+
+.preguntas_01 .ctItem > div p.false {
+  background: #f36572;
+  color: white;
+}
+
+/* Styles for buttons inside the question box */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.validate-btn, .reset-btn {
+  background-color: #003454;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

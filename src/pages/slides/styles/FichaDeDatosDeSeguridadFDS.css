@@ -1,0 +1,227 @@
+.quiz-container-ra {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-header-ra {
+  background-color: #0f172a;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.quiz-subtitle-ra {
+  color: white;
+  margin: 0 auto;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-container-ra {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 98%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.quiz-card-raFDS {
+  perspective: 1500px;
+  height: 300px;
+  cursor: pointer;
+  min-width: 290px;
+}
+
+.card-inner-ra {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.quiz-card-raFDS:hover .card-inner-ra {
+  transform: rotateY(180deg);
+}
+
+.card-front-ra,
+.card-back-ra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-front-ra {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-back-ra {
+  background-color: #0f172a;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.card-image-ra-pih {
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.card-content-ra-pih {
+  background-color: #0f172a;
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-title-ra {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  /* margin-bottom: 0.5rem; */
+}
+
+.result-message-ra {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.text-parag {
+  color: #fbfbfb;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  background-color: #17e497;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .action-button {
+    padding: 0.5rem 0.5rem;
+  }
+}
+.action-button:hover {
+  background-color: #003454;
+}
+
+.action-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.action-button.bordeado {
+  border: 3px solid #0f172a;
+}
+
+@media (max-width: 1400px) {
+  .cards-container-ra {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-container-ra {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-container-ra {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    padding-right: 0;
+    width: 80%;
+  }
+
+  .quiz-card-raFDS {
+    height: 250px;
+  }
+
+  .quiz-header-ra {
+    /* padding: 2rem 1rem; */
+  }
+}
+
+.validation-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none; /* Evita que interfiera con los eventos del usuario */
+}
+
+.validation-icon {
+  margin: 0;
+  width: 50px; /* Ajusta el tamaño según sea necesario */
+  height: 50px;
+  object-fit: contain;
+  opacity: 0.9; /* Opcional: Añade transparencia si es necesario */
+}
+
+.cuadro-boton-pih {
+  margin-top: auto; /* Empuja el botón hacia el final del contenedor */
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #003454;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cuadro-imagen-pih {
+  width: 110%; /* Ajusta el tamaño de la imagen dentro del cuadro */
+  height: 90%;
+  /* margin-bottom: 20px; */
+  border-radius: 10px 10px 0 0;
+}

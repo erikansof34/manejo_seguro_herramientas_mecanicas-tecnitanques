@@ -1,0 +1,139 @@
+:root {
+  --bg-color: #003454;
+}
+
+.trivia-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.feedback-container {
+  background: #fcfcfc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-container strong {
+  color: var(--secondary-color);
+}
+
+/* Estilos para las preguntas */
+.preguntas_01 .ctItem {
+  background: #fcfcfc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  min-width: 575px;
+  max-width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.preguntas_01 .ctItem > div p {
+  background: #ebebeb;
+  color: #8f8f8f;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.preguntas_01 .ctItem > div p.act {
+  background: var(--bg-color);
+  color: white;
+}
+
+.preguntas_01 .ctItem > div p.true {
+  background: #4caf50;
+  color: white;
+}
+
+.preguntas_01 .ctItem > div p.false {
+  background: #f44336;
+  color: white;
+}
+
+.validation-text {
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.validate-button {
+  background: #7c3aed !important;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: none;
+  font-size: 0.95rem;
+  margin: 16px auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.validate-button:hover {
+  background: #6d28d9 !important;
+}
+
+.validate-button:disabled {
+  background: #c4b5fd !important;
+  cursor: not-allowed;
+}
+
+
+.reset-button {
+  background: #7c3aed !important;
+  color: white;
+  margin-top: 16px;
+}
+
+.text-success {
+  color: #4caf50 !important;
+}
+
+.text-error {
+  color: #f44336 !important;
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .preguntas_01 .ctItem {
+    min-width: auto;
+  }
+  .preguntas_01 .ctItem > div p {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* New color classes */
+.text-success {
+  color: #4caf50;
+}
+
+.text-error {
+  color: #f44336;
+}
+
+.audio-container {
+  margin-top: 1rem;
+}
+
+.media-espanol {
+  width: 100%;
+  max-width: 300px;
+}

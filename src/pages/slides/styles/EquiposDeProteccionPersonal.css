@@ -1,0 +1,228 @@
+.image-container2 {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo para pantallas grandes */
+  margin: 0 auto;
+  text-align: center;
+}
+.tooltip-image {
+  width: 100%; /* Ajusta el tamaño según sea necesario */
+  max-width: 200px; /* Máximo ancho para que no se desborde */
+  height: auto;
+  margin-top: 10px; /* Separación del texto */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.main-image {
+  width: 100%;
+  max-width: 57vh !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+.tooltip-button {
+  position: absolute;
+  background-color: #003454;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-130%, -50%) !important;
+  z-index: 2;
+}
+
+.tooltip-button.hidden-button {
+  display: none; /* Oculta los botones cuando otro tooltip está activo */
+}
+.post-message {
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+.tooltip-text {
+  position: absolute;
+  background-color: white;
+  border: 2px solid #0f172a;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 280px;
+  color: #8f8f8f;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-out,
+    visibility 0.3s ease-out;
+  z-index: 4;
+}
+
+.tooltip-text.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #6e3cd2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #5a2fa6;
+}
+
+.main-image.darken {
+  filter: brightness(50%);
+}
+.tooltip-text[data-tooltip-id-2="3"] {
+  top: 35px;
+  left: -120px;
+}
+.tooltip-text[data-tooltip-id-2="4"] {
+  top: -20px;
+  left: -260px;
+}
+.tooltip-text[data-tooltip-id-2="5"] {
+  top: -20px;
+  left: -260px;
+}
+.tooltip-text[data-tooltip-id-2="6"] {
+  top: 35px;
+  left: -120px;
+}
+.tooltip-text[data-tooltip-id-2="8"] {
+  top: -20px;
+  left: -260px;
+}
+.tooltip-text[data-tooltip-id-2="9"] {
+  top: -105px;
+  left: -120px;
+}
+.tooltip-text[data-tooltip-id-2="10"] {
+  top: 35px;
+  left: -120px;
+}
+.tooltip-text[data-tooltip-id-2="12"] {
+  top: 35px;
+  left: -120px;
+}
+/* Animación para el cuadro de texto */
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 640px) {
+  .post-message {
+    position: relative;
+    top: 50%;
+    left: -50%;
+  }
+
+  .tooltip-button {
+    transform: translate(-70%, -50%) !important;
+  }
+  .tooltip-text {
+    position: absolute;
+    background-color: white;
+    border: 2px solid #0f172a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    color: #8f8f8f;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease-out,
+      visibility 0.3s ease-out;
+    z-index: 4;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Ajuste específico para cada cuadro de texto */
+  .tooltip-text[data-tooltip-id-2="1"] {
+    top: 30px;
+    left: 10%;
+  }
+
+  .tooltip-text[data-tooltip-id-2="2"] {
+    top: 30px;
+    left: -15px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="3"] {
+    top: 30px;
+    left: -95px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="4"] {
+    top: 30px;
+    left: -170px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="5"] {
+    top: 30px;
+    left: -170px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="6"] {
+    top: 35px;
+    left: -130px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="7"] {
+    top: -130px;
+    left: -20px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="8"] {
+    top: -20px;
+    left: -260px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="9"] {
+    top: -105px;
+    left: -120px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="10"] {
+    top: 35px;
+    left: -45px;
+  }
+
+  .tooltip-text[data-tooltip-id-2="11"] {
+    top: 10px;
+    left: 30px;
+  }
+  .tooltip-text[data-tooltip-id-2="12"] {
+    top: 35px;
+    left: -50px;
+  }
+  .tooltip-text[data-tooltip-id-2="13"] {
+    top: -15px;
+    left: 30px;
+  }
+}

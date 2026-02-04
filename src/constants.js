@@ -1,0 +1,1 @@
+export const COURSE_NAME = '| Manejo seguro de herramientas mecánicas en la operación';

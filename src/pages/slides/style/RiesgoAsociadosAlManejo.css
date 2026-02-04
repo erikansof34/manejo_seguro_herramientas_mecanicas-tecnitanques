@@ -1,0 +1,71 @@
+.tooltip-container {
+  position: relative; /* Mantén esto para que los botones se posicionen relativos al contenedor */
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1000; /* Asegura que aparezca por encima de la imagen */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Evita que el texto del tooltip se desborde */
+}
+
+.botonporcentaje {
+  background-color: #003454;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip.left-0 {
+  right: 100px; /* Alinea tooltip a la izquierda del botón */
+  margin-right: 8px;
+}
+
+.tooltip.right-0 {
+  left: 100px; /* Alinea tooltip a la derecha del botón */
+  margin-left: 8px;
+}
+
+.tooltip.bottom-0 {
+  top: 100px; /* Alinea tooltip debajo del botón */
+  margin-top: 8px;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100px; /* Cambia según dónde quieres la flecha */
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.indicadores{
+  color: #e3e3e3;
+}
+/* Estilos para centrar el audio */
+.audio-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; /* Ajusta el espaciado según sea necesario */
+}
+.tooltip-text1 {
+  background-color: #fff;
+  padding: 5px 8px; /* Reduce el padding para que los cuadros sean más pequeños */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Asegúrate de que el margen inferior sea 0 para eliminar espacio adicional */
+  font-size: 0.9rem; /* Ajusta el tamaño de la fuente si es necesario */
+}
+

@@ -1,0 +1,94 @@
+.swiper {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para la paginación */
+#swiper1 .swiper-pagination {
+  left: 10px; /* Alinea los botones a la izquierda */
+  top: 50%; /* Centra verticalmente los botones */
+  transform: translateY(-50%); /* Compensa el desplazamiento para centrar */
+  z-index: 10; /* Asegura que la paginación esté por encima de otras capas */
+}
+
+#swiper1 .swiper-pagination-bullet {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#swiper1 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #6e3cd2;
+}
+
+#swiper2 .swiper-pagination-bullet {
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#swiper2 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #6e3cd2;
+}
+
+#swiper3 .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#swiper3 .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #6e3cd2;
+}
+
+/* Asegúrate de que esto esté en tu archivo CSS */
+.swiper-slide img {
+  display: block;
+  width: 80%; /* Cambia este valor para ajustar el tamaño */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen llene su contenedor */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
